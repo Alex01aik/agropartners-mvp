@@ -41,7 +41,7 @@ const HeaderNav: React.FC = () => {
           data-aos-easing="linear"
           data-aos-duration="200"
         >
-          <Link className="headerLink" href="/" onClick={toggleOpen}>
+          <Link className="headerLink" href={`/${locale}`} onClick={toggleOpen}>
             {t("Home")}
           </Link>
           <Link
@@ -76,7 +76,7 @@ const HeaderNav: React.FC = () => {
         </nav>
       )}
       <nav id="headerNav">
-        <Link className="headerLink" href="/">
+        <Link className="headerLink" href={`/${locale}`}>
           {t("Home")}
         </Link>
         <Link className="headerLink" href={`/${locale}/shareholder`}>

@@ -1,4 +1,10 @@
-/** @type {import('next').NextConfig} */
-const nextConfig = {}
+const withNextIntl = require('next-intl/plugin')();
 
-module.exports = nextConfig
+/** @type {import('next').NextConfig} */
+const nextConfig = {
+    experimental: {
+        serverComponentsExternalPackages: ['mongoose']
+    }
+}
+
+module.exports = withNextIntl(nextConfig)

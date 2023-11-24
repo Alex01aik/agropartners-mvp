@@ -1,0 +1,43 @@
+#infoList {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 36px;
+}
+
+.infoContainer {
+    border-radius: 24px;
+    overflow: hidden;
+    position: relative;
+    max-width: 520px;
+
+    border: 2px solid white;
+}
+
+.infoImg {
+   width: 100%;
+   height: 100%;
+}
+
+.info {
+    top: 0;
+    bottom: 0;
+    position: absolute;
+    width: 50%;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    font-size: 12px;
+}
+
+@media screen and (max-width: 767px) {
+    .infoImg {
+        height: auto;
+    }
+    .info {
+        width: 100%;
+        height: fit-content;
+        position: relative;
+    }
+}

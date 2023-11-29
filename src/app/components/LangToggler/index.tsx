@@ -13,8 +13,8 @@ export const { Link, redirect, usePathname, useRouter } =
 
 export type langItem = { label: string; value: string; img: any };
 export const langs: langItem[] = [
-  { label: "Українська", value: "uk", img: ukImg },
-  { label: "English", value: "en", img: enImg },
+  { label: "UA", value: "uk", img: ukImg },
+  { label: "EN", value: "en", img: enImg },
 ];
 
 const LangToggler: React.FC = () => {
@@ -39,42 +39,21 @@ const LangToggler: React.FC = () => {
   };
 
   return selectedItem ? (
-    <div id="langDropdown">
-      <div
-        className="selected-item"
-        onClick={toggleDropdown}
-        style={{
-          backgroundImage: `url(${selectedItem.img.src})`,
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-        }}
-      >
-        {selectedItem.label}
-      </div>
-      {isOpen && (
+    <div id="langList">
+      {langs.map((item) => (
         <div
-          className="dropdown-list"
-          data-aos="flip-down"
-          data-aos-duration="200"
+          key={item.value}
+          onClick={() => handleItemClick(item)}
+          className="langIcon"
+          style={{
+            backgroundImage: `url(${item.img.src})`,
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+          }}
         >
-          {langs
-            .filter((lang) => lang.value !== locale)
-            .map((item) => (
-              <div
-                key={item.value}
-                className="dropdown-item"
-                onClick={() => handleItemClick(item)}
-                style={{
-                  backgroundImage: `url(${item.img.src})`,
-                  backgroundSize: "cover",
-                  backgroundPosition: "center",
-                }}
-              >
-                {item.label}
-              </div>
-            ))}
+          <span className="langIconText">{item.label}</span>
         </div>
-      )}
+      ))}
     </div>
   ) : (
     <></>

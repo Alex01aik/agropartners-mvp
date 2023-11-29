@@ -7,18 +7,16 @@ const Footer: React.FC = () => {
   return (
     <footer>
       <div id="contactCard">
-        <div id="contactCardBody">
-          <div className="contactCardItem">
-            <h4 className="itemTitle">{t("Address")}:</h4>
-            {t("address_value")}
-          </div>
-          <div className="contactCardItem">
-            <h4 className="itemTitle">{t("Phone")}:</h4>+38 (099) 179 73 06
-          </div>
-          <div className="contactCardItem">
-            <h4 className="itemTitle">{t("Email")}:</h4>
-            agropartneru2009@gmail.com
-          </div>
+        <div className="contactCardItem">
+          <h4 className="itemTitle">{t("Address")}:</h4>
+          {t("address_value")}
+        </div>
+        <div className="contactCardItem">
+          <h4 className="itemTitle">{t("Phone")}:</h4>+38 (099) 179 73 06
+        </div>
+        <div className="contactCardItem">
+          <h4 className="itemTitle">{t("Email")}:</h4>
+          agropartneru2009@gmail.com
         </div>
       </div>
       <span className="copyrights">

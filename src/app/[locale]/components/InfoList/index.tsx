@@ -1,5 +1,8 @@
 import { useTranslations } from "next-intl";
 import "./styles.css";
+import fields from "../../../../../public/fields.jpg";
+import pig from "../../../../../public/pig.jpg";
+import seeds from "../../../../../public/seeds.jpg";
 
 const InfoList: React.FC = () => {
   const t = useTranslations();
@@ -7,38 +10,44 @@ const InfoList: React.FC = () => {
   return (
     <div id="infoList">
       <div className="infoContainer" data-aos="fade-right">
-        <img className="infoImg" src="/fields.jpg" alt="fields" />
         <div
-          className="info"
+          className="infoImg"
           style={{
-            background: "darkgreen",
+            background: `url(${fields.src})`,
+            backgroundPosition: "left 310px top 0px",
+            backgroundSize: "cover",
           }}
-        >
+        />
+        <div className="info">
           <span>{t("commonInfo1_1")}</span>
           <span>{t("commonInfo1_2")}</span>
         </div>
       </div>
       <div className="infoContainer" data-aos="fade-right">
-        <img className="infoImg" src="/pig.jpg" alt="pig" />
         <div
-          className="info"
+          className="infoImg"
           style={{
-            background: "chocolate",
+            background: `url(${pig.src})`,
+            backgroundPosition: "left 310px top 0px",
+            backgroundSize: "cover",
           }}
-        >
+        />
+        <div className="info">
           <span>{t("commonInfo2_1")}</span>
           <span>{t("commonInfo2_2")}</span>
           <span>{t("commonInfo2_3")}</span>
         </div>
       </div>
       <div className="infoContainer" data-aos="fade-right">
-        <img className="infoImg" src="/seeds.jpg" alt="seeds" />
         <div
-          className="info"
+          className="infoImg"
           style={{
-            background: "burlywood",
+            background: `url(${seeds.src})`,
+            backgroundPosition: "left 320px top 0px",
+            backgroundSize: "cover",
           }}
-        >
+        />
+        <div className="info">
           <span>{t("commonInfo3_1")}</span>
           <span>{t("commonInfo3_2")}</span>
         </div>

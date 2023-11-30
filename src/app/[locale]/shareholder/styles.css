@@ -42,7 +42,7 @@
 }
 
 .serviceCardTitle {
-    background: #209F88;
+    background: #639a50;
     font-weight: bold;
     width: 480px;
     padding: 12px;
@@ -73,7 +73,7 @@ ul {
 }
 
 .phoneNumber {
-    color: #209F88;
+    color: #639a50;
 }
 
 @media screen and (max-width: 819px) {
